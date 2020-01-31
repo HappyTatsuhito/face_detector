@@ -29,7 +29,7 @@ def main():
     for image_path in os.listdir(path + '/face_image/'):
         
         print image_path
-        
+        count = 0
         for image_file in os.listdir(path + '/face_image/'+image_path):
             img = cv2.imread(path+'/face_image/' + image_path + '/' + image_file)
             img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -42,6 +42,6 @@ def main():
                     continue
             print '\t' + image_file
             writeDataSet(img, path, image_path, image_file, faces)
-                    
+            
 if __name__ == '__main__':
     main()
