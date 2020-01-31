@@ -16,6 +16,9 @@ dir_path = args + '/'
 
 path = os.getcwd()[:-8]
 
+img = cv2.imread('/home/demlab/Desktop/group3_data_set/group1_data_set/7_2_222.jpg')
+print img.shape[:2]
+
 '''
 txt_file = open('/home/demlab/Desktop/group3_data_set/txt/all.txt')
 learning_path = txt_file.readlines()
@@ -35,8 +38,8 @@ for txt_path in txt_random_path:
 '''    
 
     
-
+'''
 for file_path in os.listdir(path + '/learning/'):
     os.system('mv '+path+'/learning/'+file_path+'/* '+ '/home/demlab/Desktop/group3_data_set/data_set')
     os.system('mv '+path+'/face_image/'+file_path+'/* '+ '/home/demlab/Desktop/group3_data_set/data_set')
-
+'''
